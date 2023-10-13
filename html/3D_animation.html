@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /*
+            flip-outer는 단순히 width,height를 잡아줘서 
+            flip-inner가 %로 width,height 잡아주게 하는 기능??
+            그럼  flip-inner에다가 px로 크기 주는것과 같은거 아닌가?
+        */
+        .flip-inner{
+            width: 300px;
+            height: 300px;
+            position:relative;
+            transition: all 1s;
+            transform-style: preserve-3d;
+        }
+        .flip-inner:hover{
+            transform: rotateY(180deg);
+        }
+        .front{
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            /*HTML요소를 뒤집으면 뒷면에 그림자가 보이는데 이걸 안보이게 처리*/
+            backface-visibility: hidden;
+            border-radius: 50%;
+        }
+        .back{
+            width: 100%;
+            position: absolute;
+            transform: rotateY(180deg);
+
+            text-align: center;
+            font-size: 30px;
+           
+        }
+    </style>
+   
+</head>
+<body>
+    
+   
+        <div class="flip-inner">
+            <img class="front" src="../사진/12.jpeg" alt="">
+            <div class="back">
+                <h4>김종일</h4>
+                <p>Frontend Developer</p>
+            </div>
+        </div>
+       
+</body>
+</html>

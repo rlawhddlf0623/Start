@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van</title>
+    <style>  
+  
+
+    
+
+
+    /* 두번째*/   
+        .grid_container{
+            display: grid;
+            max-width: 600px;
+            grid-template-columns: 1fr 1fr 1fr ;
+            margin:auto;
+            padding: 10px;
+
+        }
+
+        .grid_container img{
+            width: 100%;
+            display: block;
+        }
+        .grid-nav{
+            grid-column: 1 / 3 ;
+            grid-row: 1 / 3;
+        }
+
+        @media screen and (max-width:768px){
+            .grid_container{       
+            grid-template-columns: 1fr ;
+            }
+            .grid-nav{
+                grid-column: 1 / 2 ;
+                 grid-row: 1 / 2;
+            }    
+        }
+
+    </style>
+</head>
+<body>
+    <h1>column : 가로 , row : 세로 </h1>
+    <div class="grid_container">
+        <div class="grid-nav"><img src="https://picsum.photos/500?r=0"></div>
+        <div ><img src="https://picsum.photos/500?r=1"></div>
+        <div ><img src="https://picsum.photos/500?r=2"></div>
+        <div ><img src="https://picsum.photos/500?r=3"></div>
+        <div ><img src="https://picsum.photos/500?r=4"></div>
+        <div><img src="https://picsum.photos/600?r=5"></div>
+    </div>
+</body>
+</html>

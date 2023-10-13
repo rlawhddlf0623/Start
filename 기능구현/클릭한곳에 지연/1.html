@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭한곳 지연효과</title>
+    <link href="./style.css" rel="stylesheet">
+    <style>
+        *{
+          pointer-events: none;
+        }
+            .pointer {
+          position: fixed;
+                width: 30px;
+                height: 30px;
+                margin: -20px 0 0 -20px;
+                border-radius: 50%;
+          /* 
+          이미지 잔상을 남기려면 
+                background: url('이미지소스') no-repeat 0 0 / cover;
+          */
+          background-color: orange;
+                animation: pointer-ani 0.5s linear;
+          animation-fill-mode: forwards;
+            }
+        @keyframes pointer-ani {
+                0% { transform: scale(0);  }
+                100% { transform: scale(1); opacity: 0; }
+            }
+      </style>
+</head>
+<body>
+    <script>
+        function setPointer(){
+          window.addEventListener('click', function(e){
+            const oldPointer = document.querySelector('.pointer')
+            const pointer = document.createElement('div')
+            pointer.style.left = `${e.layerX}px`
+            pointer.style.top = `${e.layerY}px`
+            pointer.classList.add('pointer')
+            oldPointer ? 
+            document.body.replaceChild(pointer, oldPointer) : 
+            document.body.appendChild(pointer)
+          })
+        }
+        window.addEventListener("DOMContentLoaded", setPointer)
+      </script>
+</body>
+</html>

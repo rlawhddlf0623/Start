@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{        
+            border: 1px solid black;   
+            text-align: center;       
+        }
+        .main::first-line{           
+            color: red;
+            font-size: 30px;
+        }
+        p::before{
+            content: 'before 좋아요';
+            font-size: 20px;
+            color:blueviolet;
+        }
+        p::after{
+            font-size: 20px;
+            color:brown;
+            content: 'after 좋네요';
+        }
+
+        /* 
+        pseudo-class : 다른 상태일때 
+        pseudo-element: 내부의 일부분만 스타일줄때
+          (:여도 가능하지만 구분하기위해 ::사용 )
+
+        1.자주 사용 ::after(맨뒤 글자추가) /::before(맨앞 추가)
+        2.<div style="clear: both;float: none;"></div> 대신
+            .div::after{
+                content: '';
+                display: block;
+                clear:both;
+                float:none;
+            }
+        3.숨겨진 요소 스타일링시에도 사용가능
+        4.브라우저마다 shadow DOM을 보면 살짝 다르다.
+          -webkit : 크롬,사파리,edge에서만 적용되는 스타일
+          -ms : Explorer
+          -moz :firefox
+
+        */
+        input{
+            padding: 20px;
+        }
+        .input-file::file-selector-button{
+            background: skyblue;
+            border:none;
+            padding: 20px;
+
+        }
+        .input-file::file-selector-button:hover{
+            background:rebeccapurple;
+        }
+        input[type=file]::-webkit-file-upload-button{
+            background: springgreen;
+            border: none;
+        }
+        input[type=text]::-webkit-input-placeholder{       
+            color:red;         
+        }
+        input[type=range]{
+            /*브라우저 기본 css안보이게*/
+            appearance: none;
+            width:100px;
+            
+            background-color: aqua;
+        }
+        input[type="range" i]::-webkit-slider-thumb{
+            appearance: none;
+            background: red;
+            width: 30px;
+            height: 30px;
+        }
+ 
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <h4>sdfsdfs</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit reiciendis impedit, doloribus itaque maiores labore voluptatem possimus, porro velit voluptatum veniam aut ut, corporis praesentium pariatur ducimus temporibus perspiciatis! Nulla.</p>
+    </div>
+    <input type="file" class="input-file">
+    <input type="text" placeholder="div가 두개?">
+    <input type="range">
+  
+</body>
+</html>

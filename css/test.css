@@ -1,0 +1,97 @@
+body {
+  margin: 0px;
+}
+
+.text-align {
+  text-align: center;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+ul {
+  width: 450px;
+  list-style: none;
+}
+ul li {
+  padding: 10px;
+  border: 1px solid black;
+}
+ul li:hover {
+  background-color: blue;
+}
+ul .active {
+  background-color: darkorchid;
+}
+
+.green {
+  height: 50px;
+  border-radius: 10px;
+  margin: 10px;
+  line-height: 50px;
+  padding-left: 10px;
+  background-color: green;
+}
+
+.blue {
+  height: 50px;
+  border-radius: 10px;
+  margin: 10px;
+  line-height: 50px;
+  padding-left: 10px;
+  background-color: #2a4cb2;
+}
+
+.yellow {
+  height: 50px;
+  border-radius: 10px;
+  margin: 10px;
+  line-height: 50px;
+  padding-left: 10px;
+  background-color: yellow;
+}
+
+.row {
+  display: flex;
+  text-align: center;
+}
+
+.col-6 {
+  background-color: #2a4cb2;
+  width: 50%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+  background-color: slateblue;
+}
+
+@media screen and (min-width: 720px) {
+  .md {
+    background-color: red;
+  }
+}
+
+.video-box {
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-container {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.video-title {
+  position: absolute;
+  left: 35%;
+  font-size: 50px;
+  color: whitesmoke;
+}/*# sourceMappingURL=test.css.map */

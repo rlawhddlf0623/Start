@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+
+    <style>
+        .container{
+            width: 800px;
+            height: 400px;
+            margin: auto;
+        }
+        .left{
+            width: 70%;
+            height: 100%;
+            float: left;
+        }
+        .right{
+            width: 30%;
+            height: 100%;
+            float: right;
+            background-image: url(../사진/KakaoTalk_20230811_142127796_12.jpg);
+            background-size: cover;
+        }
+        .content_top{
+            width: 100%;
+            height: 30%;
+            border: 1px solid black;
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 20px;
+        }
+        .content_bottom{
+            width: 100%;
+            height: 70%;
+            border: 1px solid black;
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 20px;
+        }
+
+        /*.navbar li : 안에 있는 모든 li
+          .navbar>li : 안에 있는 직계자식       
+        */
+        .navbar li{
+            display: inline-block;
+            font-size: 20px;
+            text-decoration: none;
+            width: 24%;
+            text-align: center;
+        }
+        .navbar a{
+            text-decoration: none;
+        }
+     
+        /*float
+        1.부모 대비 떠있어서 한번감싸주면 그 div안에서 정렬
+        2.떠 있어서 block속성처럼 가로 끝까지 차지x
+        3.처음 지정한 자리에서 위로 뜬다.
+        그래서 지상에 있는 요소가 위로 밀고 들어온다.
+        4.clear : both;
+        float있는 요소 다음요소에 주면 밀고 들어오지 않는다.
+        */
+        /*display : inline-block
+        정렬할 요소에게 display : inline-block를 주고 요소간 공백제거.
+        공백제거 방법
+        1)요소사이에 주석으로 띄어쓰기 가능
+        2)font-size : 0px;
+        공백도 0px
+        *상속되는 스타일은 중요도가 가장 낮음
+        */
+
+        /*vertical-align :상하정렬
+        inline,inline-block요소에만 적용가능
+        글을 쓰면 baseline이 존재하는데 baseline이 옆에 존재하면 
+        display : inline-block요소들이 baseline위에 오려고 함
+        */
+
+        /*float로 요소를 띄웠을때 margin을 주면 지상에 있는 요소는 건드리지 x
+        그래서 <div style="clear:both"></div>를 쓰면 이 div부터 margin으로 밀수 있음
+        */
+
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul class="navbar">
+            <li><a href="#">양주</a> </li>
+            <li><a href="#">와인</a> </li>
+            <li><a href="#">전통주</a></li>
+            <li><a href="#">소주</a></li>
+        </ul>
+    </nav>
+    <section></section>
+    <footer></footer>
+
+
+    <div class="container">
+        <div class="left">
+            <div class="content_top">
+                <img src="../사진/KakaoTalk_20230811_142127796_11.jpg" alt="" style="width: 20%;height: 100px; border-radius: 50%;float: left;">
+                <div style="width: 80%;">
+                    <p>잭다니엘</p>
+                    <p>사달라</p>    
+                </div>
+            </div>
+            <div class="content_bottom">
+                <h3>커클랜드 가성비 최강의 데낄라는 실버 데낄라</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, possimus sit rerum, quam officiis quasi culpa dolore at minima deleniti sapiente voluptas labore a earum ratione quod est atque temporibus?</p>
+
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'NanumSquareFont';
+    src: url(../font/NanumSquareAcR.woff);
+}
+/* 굵은 글씨용  */
+@font-face {
+    font-family: 'NanumSquareFont';
+    font-weight: 800;
+    src: url(../font/NanumSquareAcB.woff);
+}
+/* font 부드럽게  */
+p,h4,h3,h2,h1,span{
+    transform: rotate(0.03deg);
+}
+body{
+    margin: 0;
+}
+
+.introduction{
+    position : absolute ;
+    top:50%;
+    left :50%;
+    transform : translate(-50% ,-50%);
+}
+.introduction_img{
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+.title{
+    font-size: 30px;
+    font-family: "gulim";
+    color:cornflowerblue;
+/*글자간 간격*/
+    letter-spacing: 10px;
+/*글자 정렬*/
+    text-align: center;
+    font-weight: 900;
+}
+.conetent{
+ text-align: center;
+}
+.box{
+    width: 100%;
+    /*높이대신 padding으로 글자 위치 잡기 가능*/
+    padding: 40px;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    box-shadow: 5px 5px  slategrey;
+}
+/* 태블릿*/
+@media screen and (max-width : 1200px){
+    .introduction{
+        font-size: 30px;
+    }
+    
+}
+/* 모바일*/
+@media screen and (max-width: 768px){
+    .introduction{
+        font-size: 40px;
+    }
+    
+}
+/* 모바일 */
+@media screen and (max-width: 576px){
+    .introduction{
+        font-size: 70px;
+    }
+    
+}
+    
+
+
+
+/*
+1.이미지 가운데 정렬
+display: block; margin-left: auto; margin-right: auto;
+2.<span>
+    글자를 감쌀수있는  의미없는 태그
+3.iframe의 클래스는 해당 html페이지에서 줘야한다.
+4.스타일 우선순위 :    teg < class <id < 태그안 style < important!
+
+*/

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        div {
+            box-sizing: border-box;
+        }
+
+        li,
+        a {
+            text-decoration: none;
+        }
+
+        .main_background {
+            width: 100%;
+            height: 500px;
+            background-image: url(../사진/KakaoTalk_20230811_142127796_18.jpg), url(../사진/1.jpg);
+            /*요소를 꽉채우게 : cover , 여백있어도 배경이 짤리지않게 : contain*/
+
+            background-size: 50% 50%, 100% 100%;
+            background-repeat: no-repeat;
+            /*이미지를 어디서부터 보여줄지*/
+            background-position: 50% 100%, 0px 0px;
+            /*스크롤시 배경위치 조정가능 :  background-attachment: fixed;*/
+            /* 밝기 조절하는 필터 :안에 글자 있으면 글씨에도 필터입혀짐
+            =  이미지,배경 단독으로 사용할때
+              
+            */
+
+            padding: 1px;
+            position: relative;
+
+        }
+
+        .main_title {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+
+        }
+
+        .main_button {
+            width: 50px;
+            height: 50px;
+            font-size: 15px;
+            font-weight: 700;
+            background-color: white;
+            background-color: rgb(128, 210, 213);
+            border: none;
+            border-radius: 50%;
+
+            position: fixed;
+            top: 10%;
+            right: 3%;
+
+        }
+
+        .content {
+            width: 50%;
+            max-width: 1000px;
+            min-width: 500px;
+            height: 200px;
+            background-color: antiquewhite;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            left: 25%;
+            top: 80%;
+        }
+
+        .text_input {
+            padding: 10px;
+            border: 2px solid darkblue;
+            border-radius: 5px;
+        }
+
+        /*input[ 속성명 = 속성값]*/
+        input[type=password] {
+            padding: 10px;
+            border: 2px solid seagreen;
+            border-radius: 5px;
+        }
+
+        /*
+        1. background-image에 이미지 여러개 넣을수 있다. = 배경겹치기
+        img여러개 쓰는것보다  background-image로 이미지 위치 조정해서 사용할수 있지않나?
+        2.배경에 검은필터 주기 :overlay
+            1)background-image: linear-gradient
+                 background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../사진/KakaoTalk_20230811_142127796_11.jpg);
+            2)filter: brightness(70%);
+
+        3.margin collapse effect 
+        박스들의 테두리가 만나면 margin이 합져진다.
+        = 마진을 하나로 찹히고 둘중 더 큰 마진을 적용
+
+        해결 : 부모에 padding :1px;
+        4.position :
+        :relative 기존의 내 위치를 기준으로 
+        :fixed   브라우저 기준으로 고정 (header)
+        :absolute 부모 기준중 relative를 가지고 있는 요소 
+
+        ??.main_background의 자식으로 main_button을 넣었더니 fixed가 안먹힘 
+        = 왜??
+        공중에 뜸 
+        5.정중앙 정렬 
+            position:absolute
+            left:0;
+            right:0;
+            margin:auto;
+        6.z-index :공중에 떠있는 순서를 조정할수 있다.
+        높을수록 화면에 공중에 가깝다.
+        낮을수록 지상에 가깝다.
+
+        7.반응형 : %로 
+            max-width: 1000px;
+            min-width: 500px;
+        8.box-sizing : border-box : content + padding + border까지 포함하게
+        width는 content영역의 너비를 의미 : padding은 바깥영역 
+        9.브라우저마다 디자인이 다르게 보일수 있음
+        = css파일에 호환성 이슈 해결책 첨부 :normalize.css
+
+        10.form 안에 input 속성
+        1)name : 무슨 input인지 알수있게 적는것
+        
+        11.flex
+        반응형할때 크기 줄어들면 세로로 배치가능 
+            div를 왼쪽,오른쪽에 보내고 싶을때(nav) :  style="flex-grow=2"
+
+
+        */
+
+        .nav_container {
+            height: 60px;
+            display: flex;
+            
+            /* flex-direction: column; */
+            /* 가로가 크면 밑으로 보내기 */
+            /* flex-wrap: wrap; */
+            /* 위아래 정렬*/
+            align-items: center;
+            background-color: royalblue;
+            color: aliceblue;
+            padding: 10px;
+        }
+
+        .nav_item {
+            margin-right: 10px;
+        }
+
+        .nav_right {
+            display: flex;
+            justify-content: flex-end
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main_background">
+        <h4 class="main_title"> 벨즈!!</h4>
+        <p class="main_title">입문용 하이볼 벨즈: 코스트코에서 사세요</p>
+        <div class="content">
+            <h4>How we make drink</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus cumque odit dolorum ut suscipit pariatur?
+                Fugit ad laboriosam excepturi voluptatibus aliquid reiciendis amet atque ullam eum, doloremque ex
+                facilis sit.</p>
+        </div>
+    </div>
+
+    <button class="main_button">TOP</button>
+    <div style="width: 10px;height: 100px;"></div>
+    <form action="" method="">
+        <input type="text" class="text_input" value="나이를 입력해주세요" placeholder="배경글자" name="age">
+        <input type="password">
+        <input type="email">
+        <input type="date">
+        <input type="checkbox">
+        <input type="radio">
+        <input type="submit">
+        <button type="submit">전송</button>
+        <select name="" id="">
+            <option value="">a</option>
+            <option value="">b</option>
+            <option value="">c</option>
+            <option value="">d</option>
+        </select>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </form>
+
+    <nav class="nav_container">
+        <div class="nav_item">logo</div>
+        <div class="nav_item" style="flex-grow: 3;"></div>
+        <div class="nav_item nav_right" style="flex-grow:2">
+            <li>상품</li>
+            <li>서비스</li>
+        </div>
+    </nav>
+</body>
+
+</html>

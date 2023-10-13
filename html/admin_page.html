@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin_page</title>
+    <link rel="stylesheet" href="../css/admin_page.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   
+</head>
+
+<body>
+    
+
+
+<nav class="nav">
+    <div class="nav_left">
+        <form action="" method="POST" name="search" id="search_box" class="search_box">
+            <input class="search" id="search" type="text" placeholder="Search" autofocus autocomplete="off" target="_blank">
+            <button type="submit" class="search_submit">
+                <i class="fas fa-search"></i>
+            </button>
+         
+        </form>
+        
+    </div>
+    <div class="nav_right">
+        <ul class="nav_right_ul">
+            <li>
+                <i class="fas fa-bell"></i>
+            </li>
+            <li>
+                <i class="fas fa-envelope"></i>
+            </li>
+            <li>
+                <p style="margin-top: 1px;">김종일</p>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+<div class="wrap">
+<div class="side_bar">
+    <ul class="side_bar_ul"> 
+        <li>
+            <p>Home</p>
+            <i class="fas fa-house-damage"></i>
+            
+        </li>
+        <li>
+            <p>Services</p>
+            <i class="fas fa-igloo"></i>
+            
+        </li>
+        <li> 
+            <p>Alerts</p>
+            <i class="fas fa-fan"></i>
+           
+        </li>
+        <li>
+            <p>States</p>
+            <i class="fas fa-couch"></i>          
+        </li>
+    </ul>
+</div>
+
+<main>
+
+    <div class="Dashboaed">
+        <h1>Dashboaed</h2>
+        <ul class="Dashboaed_ul">
+            <li>
+                <div class="left">
+                    <h4>Earnings</h3>
+                    <h2>$400,000</h2>
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <h4>Earnings</h3>
+                    <h2>$400,000</h2>
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <h4>Earnings</h3>
+                    <h2>$400,000</h2>
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <h4>Earnings</h3>
+                    <h2>$400,000</h2>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="content_left">
+            <h3>Earnings Overview</h3>
+            <div class="chart">        
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <div class="content_right">
+            <ul>
+                <li>Tasks</li>
+                <li>Brasdas</li>
+                <li>wqhejkqweqwe</li>
+                <li>whskthauisdha</li>
+            </ul>
+        </div>
+    </div>
+
+</main>
+
+
+   
+    
+</div>
+<!-- script <script defer src="../JS/admin_page.js"></script>   / -->
+ 
+
+<script>
+//input - search 
+        const input = document.getElementById("search_box");
+
+        input.addEventListener("click", function () {
+            input.classList.add("change-border");
+           
+        });
+
+
+        input.addEventListener('blur',function(){
+             // 원래 테두리 색상으로 변경하려면 CSS 클래스를 제거합니다.
+            input.classList.remove('change-border')
+        })
+
+
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: 'rgba(255, 159, 162, 0.5)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1,
+            fill:true
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        },
+        responsive: true, // 반응형 활성화
+        maintainAspectRatio: false // 종횡비 유지 비활성화
+    }
+});
+</script>
+
+
+
+
+
+
+</body>
+</html>

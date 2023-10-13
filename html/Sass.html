@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/test.css">
+
+
+</head>
+<body>
+    <h3>1.리스트 만들기</h3>
+<ul>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li class="active">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+</ul>
+<h3>2.alert 박스 만들기</h3>
+<div class="alert_box text-align">
+    <div class="basic_box green">
+        <p>well done</p>
+    </div>
+    <div class="basic_box blue">
+        <p>well done</p>
+    </div>
+    <div class="basic_box yellow">
+        <p>well done</p>
+    </div>
+</div>
+
+<h3>3.column 레이아웃 만들기</h3>
+<div class="row">
+    <div class="col-6 md">가로폭</div>
+    <div class="col-6 md">2등분</div>
+</div>
+<div class="row">
+    <div class="col-4">가로폭</div>
+    <div class="col-4">3</div>
+    <div class="col-4">등분</div>
+</div>
+<h3>4.col-md-6은 어떻게 만듬?</h4>
+<h5>
+    *720px이상에서만 특정스타일 적용<br>
+    *특정 화면크기에서만 요소가 사라지거나 등장하기<br> 
+</h5>
+
+<h3>5.비디오를 배경으로 사용</h3>
+<h5>
+    비디오 파일다운 받아 같은 폴더에 준비
+</h5>
+
+<!--loop autoplay muted
+<audio controls muted>
+    <source src="../사진/bass.mp3">
+</audio>
+-->
+<video  style="width: 500px;height: 400px;" id="myVideo" controls  preload="metadata " poster="../사진/11.jpeg">
+    <source src="../사진/bridge.mp4" type="video/mp4">
+    <source src="../사진/bridge-m.webm" type="video/mp4">
+    <img  src="../사진/11.jpeg" alt="">
+</video>
+
+<div class="video-box">
+    <video class="video-container" autoplay muted loop>
+        <source src="../사진/bridge.mp4" type="video/mp4">
+    </video>
+    <h3 class="video-title">a trip in Paris</h3>
+</div>
+
+
+
+</body>
+<script>
+const video = document.getElementById('myVideo');
+
+
+
+video.addEventListener('mouseover', playVideo);
+video.addEventListener('mouseout', pauseVideo);
+
+function playVideo() {
+  video.play();
+}
+
+function pauseVideo() {
+  video.pause();
+}
+
+
+</script>
+</html>

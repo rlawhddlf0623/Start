@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cart_background{
+            background-color: antiquewhite;
+            width: 100%;
+            height: 400px;
+            padding: 30px;
+           
+            
+        }
+        td,th{
+            /* border-bottom: 1px solid rgb(81, 81, 201);     */
+            width: 50px;
+            height: 50px;   
+         
+           
+            
+        }
+        .cart_table{
+            border-collapse: collapse;
+            vertical-align: middle;
+            text-align: center;  
+            /* border: 1px solid rgb(81, 81, 201);   */
+            box-shadow: 0 0 0  1px #c2d3de; 
+            border-style: hidden;
+            border-radius: 5px;
+
+            width: 100%;
+            max-width: 1200px;
+           
+            background-color: white;
+            margin: auto;
+
+
+        }
+        .cart_table td{
+            padding: 15px;
+            border-bottom:1px solid #c2d3de;
+        }
+        .cart_table th:nth-child(2){
+            width: 400px;
+        }
+        .cart_table td p:nth-child(1){
+            font-size: 20px;
+            font-weight: 700;
+          
+        }
+        h3{
+            text-align: center;
+        }
+        .img{
+            width: 100px;
+            background-position: center;
+            background-size: cover;
+        }
+        p{
+           margin: 0px;
+           text-align: left;
+        }
+
+/*
+          구현
+          *사진 꽉차게
+                img : padding을 줘서 x
+                background-img 속성중 background-size: cover;
+        */
+    </style>
+</head>
+<body>
+
+    <div class="cart_background">
+        <h3>맛집 리스트  </h3>
+        <table class="cart_table">
+            
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="cell_long">식당</th>
+                    <th>대표 메뉴</th>
+                    <th>위치 : 가까운역</th>
+                    <th>영업시간 </th>             
+                </tr>
+            </thead>  
+            <tbody>
+                <tr>
+                    <td class="img" style="background-image: url(../사진/KakaoTalk_20230811_142127796_02.jpg);"></td>
+                    <td >
+                        <a href="https://www.instagram.com/quan_koi_/" target="_blank"><p>성수동 "꽌코이"</p></a>    
+                        <p>베트남음식<br>(팃헤오:삼겹살,깐쭈똠,라우몽:모닝글로리리)</p>
+                    </td>
+                    <td>1</td>
+                    <td>10000원</td>
+                    <td>10000원</td>
+                </tr>
+                <tr>
+                    <td class="img" style="background-image: url(../사진/KakaoTalk_20230811_142127796_03.jpg);"></td>
+                    <td >
+                        <a href="https://map.naver.com/p/entry/place/1733564981?c=19.09,0,0,0,dh" target="_blank">
+                            <p>군자역 "무조건 생고기 삼겹살"</p>
+                        </a>                  
+                        <p>삼겹살</p>
+                    </td>
+                    <td>1</td>
+                    <td>16000 원</td>
+                    <td>16000 원</td>
+                </tr>
+                <!-- <tr>             
+                    <td class="img" style="background-image: url(../사진/KakaoTalk_20230811_142127796_04.jpg);"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>   
+                    <td >$2979.00</td>         
+                </tr>   -->
+                <tr>
+                    <td colspan="5" style="text-align: right;">total price : $2979.00</td>         
+                </tr>  
+            </tbody>
+             
+        </table>
+    </div>
+     <h1>군자</h1>
+     1.<a href="https://map.naver.com/p/search/%EC%B4%88%EB%B0%A5/place/33878112?c=17.22,0,0,0,dh&placePath=%3Fentry%253Dbmp" target="_blank">군자 고급일식집  "북해도"</a>  <br>
+     2.<a href="https://map.naver.com/p/search/%EB%8D%B0%EC%9D%B4%ED%8A%B8/place/1331438803?c=15.95,0,0,0,dh&placePath=%3Fentry%253Dbmp" target="_blank">군자 안주맛집 "미주류"</a><br>
+     3.<a href="https://map.naver.com/p/search/%EB%8D%B0%EC%9D%B4%ED%8A%B8/place/20882559?c=15.95,0,0,0,dh&placePath=%3Fentry%253Dbmp" target="_blank">군자 오리고기 "군자오리촌"</a><br>
+     4.<a href="https://map.naver.com/p/search/%EB%8D%B0%EC%9D%B4%ED%8A%B8/place/41937639?c=15.95,0,0,0,dh&placePath=%3Fentry%253Dbmp" target="_blank">군자 술안주 "로쿠준"</a><br>
+     5.<a href="https://map.naver.com/p/entry/place/20843734?c=17.41,0,0,0,dh" target="_blank">군자 안주가 맛있는 이자카야 "데판야끼한"</a><br>
+     6.<a href="https://map.naver.com/p/search/%EC%B4%88%EB%B0%A5?c=15.59,0,0,0,dh" target="_blank">군자 초밥 "이이요"</a><br>
+     7.<a href="https://map.naver.com/p/search/%EC%B4%88%EB%B0%A5/place/1518338502?c=16.52,0,0,0,dh&placePath=%3Fentry%253Dbmp" target="_blank">군자 초밥 "고메"</a>
+     <h3 style="text-align: left;">8/28(월)코스<br>
+        1.이이요에서 초밥 먹기<br>
+        2.체리커피에서 커피먹고 van집에 가기<br>
+        3.11시에 나오기 <br>
+        <br>
+        8/29(화)<br>
+        *매매일지 기록 (0) <br>
+        *신문읽기 (0)<br>
+        *책 반납<br>
+        *신발 찾아오기<br>
+        *헬스 : 어깨,하체<br>
+        * 피부관리 영상 1<br>
+        *생각정리<br>
+        *세블스플릿<br>
+        *월세지원 신한통장 만들기<br>
+        *youtube 프리미엄 중복결제 해결
+        <div style="width: 100px; height: 100px;"></div>
+        <h3 style="text-align: left;">
+            1.방정리 0 <br>
+            2.샤워 0<br>
+            3.매매기록 0  <br>
+
+
+            스테이오 솔채
+
+            
+            1.양평 가평 당일치기
+            2.강릉 1박2일
+            3.
+
+            포레스트 구봉
+        </h3>
+
+
+
+     </h3>
+</body>
+</html>

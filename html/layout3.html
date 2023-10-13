@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="../JS/layout3.js"></script>
+    <link rel="stylesheet" href="../css/layout3.css"> 
+    
+</head>
+<body>
+    <form action="">
+        <h1>Contact us</h1>
+        <div class="content">
+            <label for="email">Your Email</label>                               
+            <input type="email" id="email" class="input" placeholder="email@example.com" class="required" requried autocomplete="email">
+            <span class="error-message">이메일 형식으로 입력하세요</span>
+            <div class="name">
+                <div class="name_left" >
+                    <label for="first_name">First name</label>
+                    <input type="text" class="input" id="first_name" autocomplete="first_name">
+                </div>
+                
+                <div class="name_right" >
+                    <label for="last_name">Last name</label>
+                    <input type="text" class="input" id="last_name" autocomplete="last_name">
+                </div>
+            </div>
+            <p>Message</p>
+            <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>      
+            
+            <input type="text" id="myInput" class="input">
+            <button onclick="checkInput()">확인</button>
+
+        </div>
+        <div class="subscribe">
+            <input id="sub" class="input_checkbox" type="checkbox">
+            <label for="sub" style="font-weight: 700;">subscribe</label> 
+            <button class="button_send" onclick="checkInput()">SEND</button>
+         </div> 
+      
+<!-- input에 focus가 들어온후 다른곳 클릭했을때 빈칸이면 변화 -->
+    </form>
+
+</body>
+</html>

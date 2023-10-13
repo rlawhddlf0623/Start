@@ -1,0 +1,52 @@
+/* scss를 css로 변경해야 브라우저가 읽을수 있다.
+ watch css클릭시 자동변환
+.map이 있으면  크롬에서 scss파일을 분석해 디버깅
+
+sass파일은 sass문법 사용가능한데 괄호를 안써도 된다.
+
+사용
+1.자주사용하는 특정색상을 변수에 넣어 사용
+$main-color : color ;
+1)변수명은 한국도 가능
+2)규칙적인 스타일만들때 도움
+변수의 값만 변경하면 전체적인 스타일 변경가능 
+3)사칙연산 가능
+
+문법
+1.nesting : 관련있는 스타일들을 묶을때 좋다.
+nesting 중첩은 하지 않는다.
+.main-bg h4{
+
+}
+.main-bg button{
+
+}
+.main-bg{
+    h4{}
+    button{}
+}
+2.@extend : 클래스 전체를 복사(변수와 달리 여러 값들 저장)
+% : 임시클래스
+    단독으로 컴파일되지 않는다.
+    다른곳에 종속된 클래스 사용시 
+.btn{
+    속성
+}
+.btn-green{
+    @extend .btn;
+    color: green;
+}
+
+
+*/
+
+/*
+css 변수문법
+1.root안에 변수를 쓰고 사용할때는 var()안에 사용한다.
+:root{
+    --main-color : red;
+}
+.background{
+background-color:var(--main-color);
+}
+*/

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid_container{
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 100px;
+            grid-gap:10px;
+            padding: 10px;
+            grid-template-areas: 
+            "헤더 헤더 헤더 헤더"
+            "사이드 내용 내용 내용"
+            "사이드 내용 내용 내용"
+            ;
+        }
+        .grid_container div{
+            border: 1px solid black;
+        }
+        .grid_nav{
+            grid-area: 헤더;
+        }
+        .grid_sliebar{
+            grid-area: 사이드;
+        }
+        .grid_content{
+            grid-area:내용;
+        }
+        @media screen and (max-width : 768px){
+            .grid_container{
+                grid-template-areas: 
+                "헤더 헤더 헤더 헤더"
+                "사이드 사이드 사이드 사이드"
+                "내용 내용 내용 내용";
+                grid-template-rows: 200px 200px 200px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="grid_container">
+        <div class="grid_nav"></div>
+        <div class="grid_sliebar"></div>
+        <div class="grid_content"></div>
+  
+    </div>  
+    <form action="">
+        <label for="username">Username</label>
+        <input type="text" id="username" autocomplete="none" required>
+        <label for="email">Email</label>
+        <input type="text" id="email"  autocomplete="none" required>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

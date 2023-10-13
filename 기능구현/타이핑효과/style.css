@@ -1,0 +1,17 @@
+@keyframes cursor{
+    50% { border-color : transparent;}
+}
+.text{
+    display: table-cell;
+    vertical-align: middle;
+    border-right: .05em solid black;
+
+    animation: cursor 0.5s ease infinite;
+}
+/*가로 정렬 : 개수가 몇개되던 동일한 간격으로 영역가진다.
+1.부모에 
+display : table 선언
+table-layout : fixed        
+2.자식에 
+display : table-cell을 선언
+*/

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            
+        }
+        .box{
+            margin-left: 600px;
+            
+            width: 100px;
+            height:50px;
+            
+            background-color: cadetblue;
+            text-align: center;
+            line-height: 50px;
+            color: aliceblue;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .box:hover{
+            animation-name:move ;
+            animation-duration: 0.5s;
+           
+            /*transform: translate(10px,50px);
+                 transform: scale(3);
+            */
+        }
+        @keyframes move{
+            0%{
+                transform: translateX(0deg);
+            }
+            20%{
+                transform: rotate(10deg);
+            }
+            40%{
+                transform: rotate(-10deg);
+            }
+            60%{
+                transform: rotate(10deg);
+            }
+            80%{
+                transform: rotate(-10deg);
+            }
+            100%{
+                transform: translate(0deg);
+            }
+        }
+        @keyframes text{
+            0%{
+                transform: translate(0px);
+            }33%{
+                transform: translate(200px);
+            }66%{
+                transform: translate(-200px);
+            }99%{
+                transform: translate(0px);
+            }
+        }
+        @keyframes plus{
+            33%{
+                transform: rotate(-40deg);
+            }66%{
+             
+                transform: rotate(60deg);
+                
+            }99%{
+                transform: scale(2);
+                
+            }
+        }
+        h3{
+            text-align: center;
+            transform: translate3d(0, 0, 0);
+        }
+        h3:hover{
+            animation-name:text ;
+            animation-duration: 3s;  
+        }
+        p{
+            font-size: 100px;
+           text-align: center;
+        }
+        p:hover{
+            animation-name:plus ;
+            animation-duration: 3s;
+        }
+        .side_memu{
+            width: 300px;
+            height: 100vh;
+            background-color: black;
+            position: absolute;
+            top:0px;
+            left: -200px;
+
+            color: white;
+            text-align: center;
+        }
+        .side_memu:hover{
+            left: 0px;
+            transition: all 1s;
+        }
+        .side_memu:hover h2{
+            animation-name:h2;
+            animation-duration: 1s;
+        }
+        h2{
+            margin-left: 200px;
+          
+        }
+        
+        
+        @keyframes h2 {
+            50%{
+                transform: translate(-200px);
+            
+            }
+            100%{            
+                transform: translate(0px);             
+            }
+        }
+    </style>
+</head>
+<body style="position: relative;">
+    
+    <div class="box">
+        흔들버튼
+    </div>
+    <h3>움직이는 글자</h3>
+    <p>+</p>
+
+    <div class="side_memu">
+        <h2>Menu</h2>
+        <h6>Item</h6>
+    
+
+    </div>
+   <h1>베트남거주 it</h1>
+
+</body>
+</html>
